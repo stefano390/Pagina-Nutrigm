@@ -110,6 +110,7 @@
     safe(() => window.__NUTRIGM__?.initReveals?.(), "initReveals");
     safe(() => window.__NUTRIGM__?.initMagnetic?.(), "initMagnetic");
     safe(() => window.__NUTRIGM__?.initMarquee?.(), "initMarquee");
+    safe(() => window.__NUTRIGM__?.initAnimations?.(), "initAnimations");
 
     safe(initHero, "initHero");
     safe(initForm, "initForm");

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,100..900,0;1,9..144,100..900,1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20250630">
+  <link rel="stylesheet" href="css/styles.css?v=20250702">
 </head>
 <body>
   <!-- Splash Loader -->
@@ -34,7 +34,9 @@
       </a>
       <ul class="nav-links">
         <li><a href="#about" data-cursor>Inicio</a></li>
+        <li><a href="#about" data-cursor>Sobre mí</a></li>
         <li><a href="#services" data-cursor>Servicios</a></li>
+        <li><a href="#gallery" data-cursor>Galería</a></li>
         <li><a href="#plans" data-cursor>Planes</a></li>
         <li><a href="#testimonials" data-cursor>Testimonios</a></li>
       </ul>
@@ -71,76 +73,21 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-image-wrapper">
+      <div class="hero-image-wrapper" data-parallax data-parallax-speed="0.3">
         <div class="hero-image-frame"></div>
-        <div class="hero-image-placeholder">
-          <span class="hero-emoji">🥑</span>
-        </div>
-        <div class="hero-float hero-float-1">🥗</div>
-        <div class="hero-float hero-float-2">🌿</div>
-        <div class="hero-float hero-float-3">🍋</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Manifesto Section -->
-  <section class="manifesto" id="about">
-    <div class="manifesto-inner">
-      <div class="manifesto-number reveal">01</div>
-      <div class="manifesto-content">
-        <h2 class="manifesto-title" data-split="lines">
-          Hola, soy <em>Gm</em>
-        </h2>
-        <p class="manifesto-text reveal">
-          Nutricionista apasionada por ayudarte a alcanzar tus objetivos de salud de forma sostenible y sin restricciones extremas. Mi enfoque se basa en la evidencia científica, siempre adaptándolo a tu realidad.
-        </p>
-        <p class="manifesto-text reveal">
-          Creo en la flexibilidad, no en las prohibiciones. Juntos construiremos hábitos que duren toda la vida.
-        </p>
-        <div class="manifesto-stats">
-          <div class="stat reveal">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">Años de experiencia</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-number">+500</span>
-            <span class="stat-label">Pacientes felices</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-number">95%</span>
-            <span class="stat-label">Satisfacción</span>
+        <!-- Imagen de la nutricionista - Reemplazar con imagen real -->
+        <div class="hero-image-placeholder" data-image-reveal>
+          <img src="assets/images/nutricionista-hero.jpg"
+               alt="Gm - Nutricionista"
+               class="hero-img"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="hero-fallback" style="display:none">
+            <span class="hero-emoji">🥑</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Bento Grid -->
-  <section class="services" id="services">
-    <div class="services-header">
-      <h2 class="section-title reveal">¿Cómo puedo ayudarte?</h2>
-      <p class="section-sub reveal">Servicios diseñados para acompañarte en cada etapa de tu viaje</p>
-    </div>
-    <div class="bento-grid">
-      <div class="bento-card bento-large" data-cursor>
-        <div class="bento-icon">🥗</div>
-        <h3 class="bento-title">Consultas Individualizadas</h3>
-        <p class="bento-desc">Planes nutricionales adaptados a tus necesidades, goals y estilo de vida. Cada persona es única, tu plan también.</p>
-      </div>
-      <div class="bento-card" data-cursor>
-        <div class="bento-icon">📱</div>
-        <h3 class="bento-title">Acompañamiento</h3>
-        <p class="bento-desc">Seguimiento continuo con check-ins semanales y ajustes según tu evolución.</p>
-      </div>
-      <div class="bento-card" data-cursor>
-        <div class="bento-icon">📚</div>
-        <h3 class="bento-title">Educación</h3>
-        <p class="bento-desc">Aprende a comer sin mitos ni dietas restrictivas. Construye hábitos duraderos.</p>
-      </div>
-      <div class="bento-card bento-wide" data-cursor>
-        <div class="bento-icon">🎯</div>
-        <h3 class="bento-title">Objetivos Específicos</h3>
-        <p class="bento-desc">Pérdida de peso, ganancia muscular, salud digestiva, energía, o simplemente sentirte mejor.</p>
+        <div class="hero-float hero-float-1" data-float data-float-duration="4">🥗</div>
+        <div class="hero-float hero-float-2" data-float data-float-duration="5" data-float-delay="1">🌿</div>
+        <div class="hero-float hero-float-3" data-float data-float-duration="6" data-float-delay="2">🍋</div>
       </div>
     </div>
   </section>
@@ -171,6 +118,198 @@
     </div>
   </div>
 
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <!-- Foto de la nutricionista -->
+        <div class="about-image-wrapper" data-tilt>
+          <div class="about-image-frame"></div>
+          <img src="assets/images/nutricionista-about.jpg"
+               alt="Gm - Nutricionista"
+               class="about-img"
+               data-image-reveal
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="about-fallback" style="display:none">
+            <span class="about-emoji">👩‍⚕️</span>
+          </div>
+        </div>
+        <div class="about-badge reveal" data-counter="5" data-counter-duration="2000">5+</div>
+        <p class="about-badge-text">Años de experiencia</p>
+      </div>
+      <div class="about-content">
+        <p class="about-kicker reveal">Sobre mí</p>
+        <h2 class="about-title" data-split="lines">
+          Hola, soy <em>Gm</em>
+        </h2>
+        <p class="about-text reveal">
+          Nutricionista apasionada por ayudarte a alcanzar tus objetivos de salud de forma sostenible y sin restricciones extremas. Mi enfoque se basa en la evidencia científica, siempre adaptándolo a tu realidad.
+        </p>
+        <p class="about-text reveal">
+          Creo en la flexibilidad, no en las prohibiciones. Juntos construiremos hábitos que duren toda la vida.
+        </p>
+        <div class="about-stats">
+          <div class="stat reveal" data-cursor>
+            <span class="stat-number" data-counter="500" data-counter-duration="2000">0</span>
+            <span class="stat-label">Pacientes felices</span>
+          </div>
+          <div class="stat reveal" data-cursor>
+            <span class="stat-number" data-counter="95" data-counter-duration="1500">0</span>
+            <span class="stat-label">% Satisfacción</span>
+          </div>
+          <div class="stat reveal" data-cursor>
+            <span class="stat-number" data-counter="1000" data-counter-duration="2500">0</span>
+            <span class="stat-label">Consultas realizadas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process">
+    <div class="process-inner">
+      <div class="process-header">
+        <h2 class="section-title reveal">Mi proceso</h2>
+        <p class="section-sub reveal">Un viaje transformado en 4 pasos</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal" data-scale-scroll data-cursor>
+          <div class="process-number">01</div>
+          <h3 class="process-title">Consulta Inicial</h3>
+          <p class="process-desc">Conocemos tus objetivos, hábitos y preferencias para diseñar tu plan personalizado.</p>
+        </div>
+        <div class="process-step reveal" data-scale-scroll data-cursor>
+          <div class="process-number">02</div>
+          <h3 class="process-title">Plan Personalizado</h3>
+          <p class="process-desc">Creamos un plan de alimentación que se adapta a tu estilo de vida y objetivos.</p>
+        </div>
+        <div class="process-step reveal" data-scale-scroll data-cursor>
+          <div class="process-number">03</div>
+          <h3 class="process-title">Acompañamiento</h3>
+          <p class="process-desc">Seguimiento continuo con ajustes según tu evolución y necesidades.</p>
+        </div>
+        <div class="process-step reveal" data-scale-scroll data-cursor>
+          <div class="process-number">04</div>
+          <h3 class="process-title">Hábitos Duraderos</h3>
+          <p class="process-desc">Construimos hábitos sostenibles que duran toda la vida, no solo una dieta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Bento Grid -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <h2 class="section-title reveal">¿Cómo puedo ayudarte?</h2>
+      <p class="section-sub reveal">Servicios diseñados para acompañarte en cada etapa de tu viaje</p>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-card bento-large reveal" data-cursor data-tilt>
+        <div class="bento-icon">🥗</div>
+        <h3 class="bento-title">Consultas Individualizadas</h3>
+        <p class="bento-desc">Planes nutricionales adaptados a tus necesidades, goals y estilo de vida. Cada persona es única, tu plan también.</p>
+      </div>
+      <div class="bento-card reveal" data-cursor data-tilt>
+        <div class="bento-icon">📱</div>
+        <h3 class="bento-title">Acompañamiento</h3>
+        <p class="bento-desc">Seguimiento continuo con check-ins semanales y ajustes según tu evolución.</p>
+      </div>
+      <div class="bento-card reveal" data-cursor data-tilt>
+        <div class="bento-icon">📚</div>
+        <h3 class="bento-title">Educación</h3>
+        <p class="bento-desc">Aprende a comer sin mitos ni dietas restrictivas. Construye hábitos duraderos.</p>
+      </div>
+      <div class="bento-card bento-wide reveal" data-cursor data-tilt>
+        <div class="bento-icon">🎯</div>
+        <h3 class="bento-title">Objetivos Específicos</h3>
+        <p class="bento-desc">Pérdida de peso, ganancia muscular, salud digestiva, energía, o simplemente sentirte mejor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <h2 class="section-title reveal">Mis creaciones</h2>
+      <p class="section-sub reveal">Platos saludables y deliciosos para inspirarte</p>
+    </div>
+    <div class="gallery-grid">
+      <!-- Imagen 1 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.2">
+          <img src="assets/images/plato-1.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Desayuno</span>
+        </div>
+      </div>
+      <!-- Imagen 2 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.25">
+          <img src="assets/images/plato-2.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Almuerzo</span>
+        </div>
+      </div>
+      <!-- Imagen 3 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.3">
+          <img src="assets/images/plato-3.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Cena</span>
+        </div>
+      </div>
+      <!-- Imagen 4 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.2">
+          <img src="assets/images/plato-4.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Snack</span>
+        </div>
+      </div>
+      <!-- Imagen 5 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.25">
+          <img src="assets/images/plato-5.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Post-entreno</span>
+        </div>
+      </div>
+      <!-- Imagen 6 -->
+      <div class="gallery-item reveal" data-cursor data-tilt>
+        <div class="gallery-image" data-parallax data-parallax-speed="0.3">
+          <img src="assets/images/plato-6.jpg"
+               alt="Plato saludable"
+               data-image-reveal
+               onerror="this.parentElement.parentElement.style.display='none'">
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-tag">Especial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Plans Section -->
   <section class="plans" id="plans">
     <div class="plans-header">
@@ -178,7 +317,7 @@
       <p class="section-sub reveal">Opciones flexibles para adaptarse a tus objetivos</p>
     </div>
     <div class="plans-grid">
-      <div class="plan-card reveal" data-cursor>
+      <div class="plan-card reveal" data-cursor data-tilt>
         <div class="plan-badge">Descubrimiento</div>
         <h3 class="plan-name">Plan Inicial</h3>
         <div class="plan-price">
@@ -195,7 +334,7 @@
           <span class="btn-inner">Comenzar</span>
         </a>
       </div>
-      <div class="plan-card plan-popular reveal" data-cursor>
+      <div class="plan-card plan-popular reveal" data-cursor data-tilt>
         <div class="plan-badge plan-badge-popular">Más popular</div>
         <h3 class="plan-name">Plan Transformación</h3>
         <div class="plan-price">
@@ -213,7 +352,7 @@
           <span class="btn-inner">Comenzar</span>
         </a>
       </div>
-      <div class="plan-card reveal" data-cursor>
+      <div class="plan-card reveal" data-cursor data-tilt>
         <div class="plan-badge">Mantenimiento</div>
         <h3 class="plan-name">Plan Continuo</h3>
         <div class="plan-price">
@@ -240,7 +379,7 @@
       <h2 class="section-title reveal">Lo que dicen mis pacientes</h2>
     </div>
     <div class="testimonials-track" data-testimonials-track>
-      <div class="testimonial-card" data-cursor>
+      <div class="testimonial-card reveal" data-cursor data-tilt>
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">
           "Por primera vez pude mantener una alimentación saludable sin sentirme privada. Gm entendió exactamente mis necesidades."
@@ -253,7 +392,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card" data-cursor>
+      <div class="testimonial-card reveal" data-cursor data-tilt>
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">
           "El acompañamiento hizo toda la diferencia. Siempre sentí que tenía apoyo cuando lo necesitaba."
@@ -266,7 +405,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card" data-cursor>
+      <div class="testimonial-card reveal" data-cursor data-tilt>
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">
           "Aprendí a comer sin mitos ni dietas restrictivas. Los hábitos que construímos van para toda la vida."
@@ -282,6 +421,17 @@
     </div>
   </section>
 
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-inner reveal" data-scale-scroll>
+      <h2 class="cta-title">¿Lista para transformar tu relación con la comida?</h2>
+      <p class="cta-sub">Comienza tu viaje hacia una alimentación consciente hoy</p>
+      <a href="#contact" class="btn btn-primary btn-large btn-magnetic" data-magnetic data-cursor>
+        <span class="btn-inner">Empieza ahora</span>
+      </a>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section class="contact" id="contact">
     <div class="contact-inner">
@@ -291,15 +441,15 @@
           Contáctame y comencemos tu journey hacia una alimentación consciente
         </p>
         <div class="contact-links">
-          <a href="mailto:contacto@nutrigm.com" class="contact-link reveal" data-cursor>
+          <a href="mailto:contacto@nutrigm.com" class="contact-link reveal" data-cursor data-scramble>
             <span class="contact-icon">📧</span>
             <span class="contact-text">contacto@nutrigm.com</span>
           </a>
-          <a href="https://wa.me/5491112345678" class="contact-link reveal" data-cursor>
+          <a href="https://wa.me/5491112345678" class="contact-link reveal" data-cursor data-scramble>
             <span class="contact-icon">💬</span>
             <span class="contact-text">+54 9 11 1234-5678</span>
           </a>
-          <a href="https://instagram.com/nutrigm" class="contact-link reveal" data-cursor>
+          <a href="https://instagram.com/nutrigm" class="contact-link reveal" data-cursor data-scramble>
             <span class="contact-icon">📸</span>
             <span class="contact-text">@nutrigm</span>
           </a>
@@ -344,6 +494,7 @@
           <ul>
             <li><a href="#about">Inicio</a></li>
             <li><a href="#services">Servicios</a></li>
+            <li><a href="#gallery">Galería</a></li>
             <li><a href="#plans">Planes</a></li>
             <li><a href="#contact">Contacto</a></li>
           </ul>
@@ -373,6 +524,7 @@
   <script defer src="js/reveal.js"></script>
   <script defer src="js/magnetic.js"></script>
   <script defer src="js/marquee.js"></script>
+  <script defer src="js/animations.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>
